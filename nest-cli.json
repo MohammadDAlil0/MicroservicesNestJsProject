@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/bookmark-projects/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/bookmark-projects/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/bookmark-projects",
+  "projects": {
+    "bookmark-projects": {
+      "type": "application",
+      "root": "apps/bookmark-projects",
+      "entryFile": "main",
+      "sourceRoot": "apps/bookmark-projects/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/bookmark-projects/tsconfig.app.json"
+      }
+    },
+    "books": {
+      "type": "application",
+      "root": "apps/books",
+      "entryFile": "main",
+      "sourceRoot": "apps/books/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/books/tsconfig.app.json"
+      }
+    },
+    "bookstore-api-getway": {
+      "type": "application",
+      "root": "apps/bookstore-api-getway",
+      "entryFile": "main",
+      "sourceRoot": "apps/bookstore-api-getway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/bookstore-api-getway/tsconfig.app.json"
+      }
+    },
+    "users": {
+      "type": "application",
+      "root": "apps/users",
+      "entryFile": "main",
+      "sourceRoot": "apps/users/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/users/tsconfig.app.json"
+      }
+    }
+  }
+}
